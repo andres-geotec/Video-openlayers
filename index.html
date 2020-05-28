@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css">
+    <link rel="stylesheet" href="mapa.css">
+</head>
+<body>
+    <div id="map" class="map"></div>
+    <!-- Default dropright button -->
+    <div class="btn-group dropright button">
+        <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Climas
+        </button>
+        <div class="dropdown-menu">
+            <h6 class="dropdown-header">Capas</h6>
+            <div class="dropdown-item form-check">
+                    <input class="form-check-input" type="checkbox" name="gridRadios" id="animacion-mexico" onchange="pickLayer('animacion-mexico');" checked>
+                    <!--input class="form-check-input" type="checkbox" name="gridRadios" id="animacion-mexico"-->
+                <label class="form-check-label" for="animacion-mexico">
+                    video
+                </label>
+            </div>
+            <div class="dropdown-item form-check">
+                <input class="form-check-input" type="checkbox" name="gridRadios" id="states" onchange="pickLayer('states');" checked>
+                <label class="form-check-label" for="states">
+                    Otra cosa
+                </label>
+            </div>
+            <div class="dropdown-item form-check">
+                <input class="form-check-input" type="checkbox" name="gridRadios" id="osm" onchange="pickLayer('osm');" checked>
+                <label class="form-check-label" for="osm">
+                    Paises
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="ol-popup">
+        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <div id="popup-content"></div>
+    </div>
+
+    <script src="http://tec.geo-estrategia.net/cinemap-web/v0_190612/_resources/libs/jquery/v3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+    <script src="mapa.js"></script>
+    <script src="video.js"></script>
+</body>
+</html>
